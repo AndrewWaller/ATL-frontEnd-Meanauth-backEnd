@@ -3,13 +3,14 @@ import {ValidateService} from '../../services/validate.service'
 import {AuthService} from '../../services/auth.service'
 import {FlashMessagesService} from 'angular2-flash-messages';
 import {Router} from '@angular/router';
+import { error } from 'selenium-webdriver';
 
 @Component({
   selector: 'app-register',
-  templateUrl: './register.component.html',
-  styleUrls: ['./register.component.css']
+  templateUrl: './register-page.component.html',
+  styleUrls: ['./register-page.component.css']
 })
-export class RegisterComponent implements OnInit {
+export class RegisterPageComponent implements OnInit {
   name: String;
   username: String;
   email: String;

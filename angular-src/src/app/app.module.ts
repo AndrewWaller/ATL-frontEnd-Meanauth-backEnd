@@ -23,6 +23,9 @@ import { TipPageComponent } from './components/tip-page/tip-page.component';
 import { SplashComponent } from './components/splash/splash.component';
 import { LoginPageComponent } from './components/login-page/login-page.component';
 import { RegisterPageComponent } from './components/register-page/register-page.component';
+import { ValidateService } from './services/validate.service';
+import { FlashMessagesService } from 'angular2-flash-messages/module/flash-messages.service';
+import { AuthService } from './services/auth.service';
 const appRoutes: Routes = [
   {path: 'home', component: SplashComponent},
   {path: 'tip-page', component: TipPageComponent},
@@ -55,7 +58,10 @@ const appRoutes: Routes = [
   ],
   providers: [
     LoginService,
-    TipService
+    TipService,
+    ValidateService,
+    FlashMessagesService,
+    AuthService
   ],
   bootstrap: [AppComponent]
 })
