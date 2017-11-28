@@ -1,29 +1,37 @@
-# Node Authentication API
-
-API for registering users with mongodb and authentication using a JWT (json web token). This app uses passport and passport-jwt and uses a JWT strategy
+# MEAN Stack app for No-instructor 10|17|17
 
 ### Version
-1.0.0
+Beta         //1.0.0
+
 
 ## Usage
 
-```bash
-npm install
+
+### Installation
+
+#### Inside the root folder
+
+Install the dependencies
+
+```sh
+$ npm install
+```
+Run server
+
+```sh
+$ npm start
 ```
 
-```bash
-npm start
-```
 
-##Endpoints
-```bash
-POST /users/register
-```
+#### Inside the angular-src folder
 
-```bash
-POST /users/authenticate   // Gives back a token
-```
+Install the dependencies
 
-```bash
-GET /users/profile         // Needs json web token to authorize
+```sh
+$ npm install
+```
+Run client-side
+
+```sh
+$ ng serve
 ```
