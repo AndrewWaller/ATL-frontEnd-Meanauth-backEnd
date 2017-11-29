@@ -1,6 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import {RouterModule, Routes} from '@angular/router';
+import { RouterModule, Routes } from '@angular/router';
 import { HttpModule } from '@angular/http';
 import { FormsModule} from '@angular/forms';
 
@@ -22,15 +22,15 @@ import { FooterComponent } from './components/footer/footer.component';
 import { TipPageComponent } from './components/tip-page/tip-page.component';
 import { SplashComponent } from './components/splash/splash.component';
 import { LoginPageComponent } from './components/login-page/login-page.component';
-import { RegisterPageComponent } from './components/register-page/register-page.component';
+import { RegisterComponent } from './components/register/register.component';
 import { ValidateService } from './services/validate.service';
-import { FlashMessagesService } from 'angular2-flash-messages/module/flash-messages.service';
 import { AuthService } from './services/auth.service';
+
 const appRoutes: Routes = [
   {path: 'home', component: SplashComponent},
   {path: 'tip-page', component: TipPageComponent},
   {path: 'login-page', component: LoginPageComponent},
-  {path: 'register-page', component: RegisterPageComponent},
+  {path: 'register-page', component: RegisterComponent},
   {path: '', redirectTo: 'home', pathMatch: 'full'}
 ];
 
@@ -46,7 +46,7 @@ const appRoutes: Routes = [
     TipPageComponent,
     SplashComponent,
     LoginPageComponent,
-    RegisterPageComponent
+    RegisterComponent
   ],
   imports: [
     BrowserModule,
@@ -60,7 +60,6 @@ const appRoutes: Routes = [
     LoginService,
     TipService,
     ValidateService,
-    FlashMessagesService,
     AuthService
   ],
   bootstrap: [AppComponent]
