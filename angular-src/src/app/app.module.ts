@@ -12,7 +12,10 @@ import { AngularFireAuthModule } from 'angularfire2/auth';
 // import services
 import { LoginService } from './services/login.service';
 import { TipService } from './services/tip.service';
+import { ValidateService } from './services/validate.service';
+import { AuthService } from './services/auth.service';
 
+// import components
 import { AppComponent } from './app.component';
 import { HomeComponent } from './components/home/home.component';
 import { LoginComponent } from './components/login/login.component';
@@ -23,14 +26,14 @@ import { TipPageComponent } from './components/tip-page/tip-page.component';
 import { SplashComponent } from './components/splash/splash.component';
 import { LoginPageComponent } from './components/login-page/login-page.component';
 import { RegisterComponent } from './components/register/register.component';
-import { ValidateService } from './services/validate.service';
-import { AuthService } from './services/auth.service';
+import { DashboardComponent } from './components/dashboard/dashboard.component';
 
 const appRoutes: Routes = [
   {path: 'home', component: SplashComponent},
   {path: 'tip-page', component: TipPageComponent},
   {path: 'login-page', component: LoginPageComponent},
   {path: 'register-page', component: RegisterComponent},
+  {path: 'dashboard', component: DashboardComponent},
   {path: '', redirectTo: 'home', pathMatch: 'full'}
 ];
 
@@ -46,7 +49,8 @@ const appRoutes: Routes = [
     TipPageComponent,
     SplashComponent,
     LoginPageComponent,
-    RegisterComponent
+    RegisterComponent,
+    DashboardComponent
   ],
   imports: [
     BrowserModule,

@@ -1,4 +1,52 @@
 import { Component, OnInit } from '@angular/core';
+import {AuthService} from '../../services/auth.service';
+import {Router} from '@angular/router';
+
+@Component({
+    selector: 'app-login-page',
+    templateUrl: './login-page.component.html',
+    styleUrls: ['./login-page.component.css']
+})
+export class LoginPageComponent implements OnInit {
+  username: String;
+  password: String;
+
+  constructor(
+    private authService:AuthService,
+    private router:Router,
+  ) { }
+
+  ngOnInit() {
+  }
+
+  onLoginSubmit(){
+    const user = {
+      username: this.username,
+      password: this.password
+    }
+
+    this.authService.authenticateUser(user).subscribe(data => {
+      if(data.success){
+        this.authService.storeUserData(data.token, data.user);
+        /*this.flashMessage.show('You are now logged in', {
+          cssClass: 'alert-success',
+          timeout: 5000});*/
+        this.router.navigate(['dashboard']);
+        alert('You are now logged into your A.T.L. DATABASE!');
+      } else {
+        /*this.flashMessage.show(data.msg, {
+          cssClass: 'alert-danger',
+          timeout: 5000});*/
+        this.router.navigate(['login-page']);
+        alert('Oops! Something went wrong, please try again.');
+      }
+    });
+  }
+
+}
+
+
+/*import { Component, OnInit } from '@angular/core';
 
 import { LoginService } from '../../services/login.service';
 import { TipService } from '../../services/tip.service';
@@ -137,4 +185,4 @@ export class LoginPageComponent implements OnInit {
             // console.log(this.userTips);
         });
     }
-}
+} */

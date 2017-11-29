@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import {ValidateService} from '../../services/validate.service'
 import {AuthService} from '../../services/auth.service'
 import {Router} from '@angular/router';
+import { error } from 'util';
 
 @Component({
   selector: 'app-register',
@@ -49,11 +50,11 @@ export class RegisterComponent implements OnInit {
     this.authService.registerUser(user).subscribe(data => {
       if(data.success){
         //this.flashMessage.show('You are now registered and can log in', {cssClass: 'alert-success', timeout: 3000});
-        console.log('success, you are now registered, check the mongo shell');
-        this.router.navigate(['/home']);
+        alert('success, you are now registered, you can now login');
+        this.router.navigate(['/login-page']);
       } else {
         //this.flashMessage.show('Something went wrong', {cssClass: 'alert-danger', timeout: 3000});
-        console.log('Something went wrong');
+        alert('Something went wrong with your registration, please try again or try agin at a later time. ' + error);
         this.router.navigate(['/register']);
       }
     });
