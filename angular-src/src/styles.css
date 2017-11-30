@@ -2,11 +2,12 @@
 /*@import './bootstrap-styles/bootstrap-3.3.7-dist/css/bootstrap.min.css';*/
 
 body{
+  font-family: 'Vollkorn SC', serif;
+  background-color: #6495ED;
   height:100%;
   width:100%;
-  background-color: #6495ED;
-  font-family: 'Vollkorn SC', serif;
 }
+
 
 /* Global flex Styles */
 

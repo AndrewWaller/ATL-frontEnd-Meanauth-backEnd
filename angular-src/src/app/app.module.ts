@@ -3,6 +3,7 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { HttpModule } from '@angular/http';
 import { FormsModule} from '@angular/forms';
+import { ParticlesModule } from 'angular-particle';
 
 // import angular fire modules
 import { environment } from './../environments/environment';
@@ -27,6 +28,7 @@ import { SplashComponent } from './components/splash/splash.component';
 import { LoginPageComponent } from './components/login-page/login-page.component';
 import { RegisterComponent } from './components/register/register.component';
 import { DashboardComponent } from './components/dashboard/dashboard.component';
+import { OnInit } from '@angular/core/src/metadata/lifecycle_hooks';
 
 const appRoutes: Routes = [
   {path: 'home', component: SplashComponent},
@@ -50,7 +52,7 @@ const appRoutes: Routes = [
     SplashComponent,
     LoginPageComponent,
     RegisterComponent,
-    DashboardComponent
+    DashboardComponent,
   ],
   imports: [
     BrowserModule,
@@ -58,7 +60,8 @@ const appRoutes: Routes = [
     FormsModule,
     AngularFireModule.initializeApp(environment.firebase),
     AngularFireAuthModule,
-    RouterModule.forRoot(appRoutes)
+    RouterModule.forRoot(appRoutes),
+    ParticlesModule
   ],
   providers: [
     LoginService,
@@ -68,4 +71,14 @@ const appRoutes: Routes = [
   ],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule implements OnInit{ 
+  
+
+
+  constructor() {}
+
+  ngOnInit() {
+    
+  }
+}
+
