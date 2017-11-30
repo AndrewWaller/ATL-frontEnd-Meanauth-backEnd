@@ -1,5 +1,5 @@
 <!-- start of hero image -->
-<particles [params]="myParams" [style]="myStyle" [width]="width" [height]="height"></particles>
+
 <div class="zindex-ear"></div>
 <div class="large bubble center-block text-center">
 <p id="curve-text-1"> &#x200b; &#x200b; &#x200b; &#x200b; &#x200b; &#x200b; &#x200b; &#x200b; &#x200b; &#x200b; &#x200b; &#x200b; &#x200b; &#x200b; &#x200b; &#x200b; &#x200b; &#x200b; &#x200b; &#x200b; &#x200b; &#x200b; Anonymous Tip Line</p>
@@ -16,6 +16,10 @@
   </a>
 
 <!--<app-login></app-login>-->
-<app-tip></app-tip>
+<a  routerLink="/tip-page" class="tip-anchor"><div class="tip center-block">
+  <p class="option-text text-center">Tip</p>
+</div>
+</a>
 
 <!-- end of hero image -->
+<particles [params]="myParams" [style]="myStyle" [width]="width" [height]="height"></particles>
