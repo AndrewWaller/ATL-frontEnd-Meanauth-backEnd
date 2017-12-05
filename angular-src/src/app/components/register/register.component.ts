@@ -14,6 +14,7 @@ export class RegisterComponent implements OnInit {
   username: String;
   email: String;
   password: String;
+  tips: object = {};
 
   myStyle: object = {};
   myParams: object = {};
@@ -155,7 +156,8 @@ export class RegisterComponent implements OnInit {
       name: this.name,
       email: this.email,
       username: this.username,
-      password: this.password
+      password: this.password,
+      tips: []
     }
 
     // Required Fields

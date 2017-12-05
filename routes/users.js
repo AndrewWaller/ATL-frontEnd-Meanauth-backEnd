@@ -11,8 +11,10 @@ router.post('/register', (req, res, next) => {
     name: req.body.name,
     email: req.body.email,
     username: req.body.username,
-    password: req.body.password
+    password: req.body.password,
+    tips: req.body.tips
   });
+console.log(newUser);
 
   User.addUser(newUser, (err, user) => {
     if(err){
@@ -47,7 +49,7 @@ router.post('/authenticate', (req, res, next) => {
           user: {
             id: user._id,
             name: user.name,
-            username: user.username,
+            username: user.uid,
             email: user.email
           }
         });

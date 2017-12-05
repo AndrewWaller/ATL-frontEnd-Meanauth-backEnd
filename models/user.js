@@ -18,6 +18,10 @@ const UserSchema = mongoose.Schema({
   password: {
     type: String,
     required: true
+  },
+  tips: {
+    type: Object[],
+    required: true
   }
 });
 
