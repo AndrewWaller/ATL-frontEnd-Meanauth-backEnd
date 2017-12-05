@@ -20,7 +20,7 @@ const UserSchema = mongoose.Schema({
     required: true
   },
   tips: {
-    type: Object[],
+    type: Object,
     required: true
   }
 });
