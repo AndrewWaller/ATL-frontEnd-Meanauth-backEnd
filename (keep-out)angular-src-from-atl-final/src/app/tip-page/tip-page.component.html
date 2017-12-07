@@ -1,0 +1,39 @@
+
+<!-- start of go back button -->
+  <a  routerLink="/home"><div class="goback"></div></a>
+<!-- end of go back button -->
+
+<!-- header -->
+  <h1 class="text-center">Send Anonymous Tip</h1>
+
+
+<!-- start of form -->
+  <form #tipForm="ngForm" (ngSubmit)="submitTipIntoArray()">
+    <textarea id="user-tips" [(ngModel)]="content" class="tips center-block" name="tip" rows="18" cols="80" placeholder="Enter tip here!..." required></textarea>
+
+    <input type="checkbox" name="disclaimer" value="disclaimer" ngModel required>
+    <label for="disclaimer" class="white-text">I agree to the a.t.l disclaimer</label>
+
+    <input class="tip-submit center-block" type="submit" name="submit" value="Submit Tip" [disabled]="tipForm.invalid">
+  </form>
+<!-- end of form -->
+
+<!-- begin warnings -->
+<p class="text-center warning white-text" *ngIf="!loggedInUser">Warning: You are not logged in, therefore the tips have nowhere to go. Please contact your administrator and have him log in.</p>
+<!-- end warnings -->
+
+<!-- begin disclaimer -->
+<div class="container">
+  <div class="row">
+    <div class="col-sm-10 col-sm-offset-1 tip-page-disclaimer">
+        <h3 class="text-center">Disclaimer</h3>
+        <p>The creators of ATL will do their best to maintain the security of the tips that are submitted. We are not responsible for anyone obtaining tips via a breach in security.
+          This includes, but is not limited to, hacking, giving out the view password, or losing the password. Please use this app responsibly and maintain the integrity of the app by
+          keeping your viewing password to yourself and not giving it out to others.
+        </p>
+    </div>
+  </div>
+</div>
+
+
+<!-- end disclaimer -->

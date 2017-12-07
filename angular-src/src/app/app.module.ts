@@ -28,6 +28,8 @@ import { SplashComponent } from './components/splash/splash.component';
 import { LoginPageComponent } from './components/login-page/login-page.component';
 import { RegisterComponent } from './components/register/register.component';
 import { DashboardComponent } from './components/dashboard/dashboard.component';
+import { HelpComponent } from './components/help/help.component';
+import { TutorialComponent } from './components/tutorial/tutorial.component' ;
 import { OnInit } from '@angular/core/src/metadata/lifecycle_hooks';
 
 const appRoutes: Routes = [
@@ -36,6 +38,8 @@ const appRoutes: Routes = [
   {path: 'login-page', component: LoginPageComponent},
   {path: 'register-page', component: RegisterComponent},
   {path: 'dashboard', component: DashboardComponent},
+  {path: 'help', component: HelpComponent},
+  {path: 'tutorial', component: TutorialComponent},
   {path: '', redirectTo: 'home', pathMatch: 'full'}
 ];
 
@@ -53,6 +57,8 @@ const appRoutes: Routes = [
     LoginPageComponent,
     RegisterComponent,
     DashboardComponent,
+    HelpComponent,
+    TutorialComponent
   ],
   imports: [
     BrowserModule,

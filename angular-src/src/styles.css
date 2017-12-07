@@ -2,13 +2,19 @@
 /*@import './bootstrap-styles/bootstrap-3.3.7-dist/css/bootstrap.min.css';*/
 
 body{
-  font-family: 'Vollkorn SC', serif;
-  background-image: url("./app/img/anonymous.jpg");
   height:100%;
   width:100%;
+  background-image: url("app/img/anonymous.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  font-family: 'Vollkorn SC', serif;
+  min-height: 100vh;
+  color: white;
 }
-
-
+/* body {
+  background-image: url("../img/anonymous.jpg")
+} */
 /* Global flex Styles */
 
 .flex-container {

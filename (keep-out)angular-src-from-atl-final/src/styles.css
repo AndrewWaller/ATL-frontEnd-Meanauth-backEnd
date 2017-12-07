@@ -1,0 +1,29 @@
+/* You can add global styles to this file, and also import other style files */
+/*@import './bootstrap-styles/bootstrap-3.3.7-dist/css/bootstrap.min.css';*/
+
+body{
+  height:100%;
+  width:100%;
+  background-image: url("app/img/anonymous2.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  font-family: 'Vollkorn SC', serif;
+  min-height: 100vh;
+}
+/* body {
+  background-image: url("../img/anonymous.jpg")
+} */
+/* Global flex Styles */
+
+.flex-container {
+  display: flex;
+}
+
+.justify-center {
+  justify-content: center;
+}
+
+.align-center {
+  align-content: center;
+}
