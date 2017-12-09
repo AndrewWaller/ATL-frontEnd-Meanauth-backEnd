@@ -45,7 +45,7 @@ router.get('/tip-uid/:id', function(req, res, next) {
 // get single tip via username
 router.get('/tip-username/:id', function(req, res, next) {
     console.log(`TIP-USERNAME: Searching for tip with username ${req.params.id}`);
-    db.tips.findOne({uid: req.params.id}, function (err, tip) {
+    db.tips.findOne({username: req.params.id}, function (err, tip) {
         if (err) {
             res.send(err);
         }
