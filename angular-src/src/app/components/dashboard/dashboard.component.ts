@@ -8,9 +8,10 @@ import { Router } from '@angular/router';
   styleUrls: ['./dashboard.component.css']
 })
 export class DashboardComponent implements OnInit {
-  user:Object;
+  user: Object;
+  public canViewTips = false;
 
-  constructor(private authService:AuthService, private router:Router) { }
+  constructor(private authService: AuthService, private router: Router) { }
 
   ngOnInit() {
     this.authService.getProfile().subscribe(profile => {
