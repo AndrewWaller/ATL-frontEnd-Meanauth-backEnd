@@ -12,6 +12,13 @@
 </div>
 <div class="view-tips" *ngIf="user">
   <div class="flex-container justify-center">
-    <button class="btn btn-info">Click here to view your tips</button>
+    <button class="btn btn-info" (click)="viewTips">Click here to view your tips</button>
+    <div class="container" *ngIf="canViewTips === true">
+      <div class="row">
+        <div class="col-sm-4">DATE</div>
+        <div class="col-sm-8">TIP</div>
+      </div>
+      <div class="row"></div>
+    </div>
   </div>
 </div>
