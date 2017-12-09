@@ -12,13 +12,16 @@
 </div>
 <div class="view-tips" *ngIf="user">
   <div class="flex-container justify-center">
-    <button class="btn btn-info" (click)="viewTips">Click here to view your tips</button>
-    <div class="container" *ngIf="canViewTips === true">
-      <div class="row">
-        <div class="col-sm-4">DATE</div>
-        <div class="col-sm-8">TIP</div>
-      </div>
-      <div class="row"></div>
+    <button class="btn btn-info" (click)="viewTips(user.username)">Click here to view your tips</button>
+  </div>
+  <div class="container tip-container" *ngIf="canViewTips === true">
+    <div class="row">
+      <div class="col-sm-4">DATE</div>
+      <div class="col-sm-8">TIP</div>
+    </div>
+    <div class="row" *ngFor="let tip of user.tips">
+      <div class="col-sm-4">{{ tip.date }}</div>
+      <div class="col-sm-8">{{ tip.content }} </div>
     </div>
   </div>
 </div>

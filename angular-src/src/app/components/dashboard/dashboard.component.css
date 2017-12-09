@@ -5,3 +5,8 @@
 .view-tips {
     color: #000;
 }
+
+.tip-container {
+    background-color: rgba(50, 50, 50, 0.9);
+    color: #fff;
+}
