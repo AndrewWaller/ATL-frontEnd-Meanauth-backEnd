@@ -2,7 +2,7 @@ const express = require('express');
 const router = express.Router();
 const mongojs = require('mongojs');
 
-const db = mongojs('mongodb://fleury:theo@ds259175.mlab.com:59175/fleury-sandbox', ['users']);
+const db = mongojs('mongodb://fleury:theo@ds259175.mlab.com:59175/fleury-sandbox', ['tips']);
 console.log('database:', db);
 
 // apit test
