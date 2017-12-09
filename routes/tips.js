@@ -2,7 +2,14 @@ const express = require('express');
 const router = express.Router();
 const mongojs = require('mongojs');
 
-const db = mongojs('mongodb://fleury:theo@ds259175.mlab.com:59175/fleury-sandbox', ['tips']);
+const db = mongojs('mongodb://fleury:theo@ds259175.mlab.com:59175/fleury-sandbox', ['users']);
+console.log('database:', db);
+
+// apit test
+router.get('/test', function(req, res, next) {
+    console.log('recieved api call for test. current database is', db);
+    res.json(db);
+})
 
 // get all tips
 router.get('/tips', function(req, res, next) {
