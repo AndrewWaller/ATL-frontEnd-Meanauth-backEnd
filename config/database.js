@@ -1,4 +1,4 @@
 module.exports = {
-  database: 'mongodb://Adrw4:aw0539352@ds044667.mlab.com:44667/no-instructor',
+  database: 'mongodb://fleury:theo@ds259175.mlab.com:59175/fleury-sandbox',
   secret: 'yoursecret'
 }
