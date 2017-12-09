@@ -52,7 +52,7 @@ export class TipPageComponent implements OnInit {
     };
 
     // console.log('Submitting!!', newTip);
-    this._tipService.pushTip(newTip, this.loggedInUser.uid)
+    this._tipService.pushTip(newTip, this.loggedInUser.username)
     .subscribe( data => {
         console.log( 'We good?');
         this.content = ''; // reset textarea after submitting
