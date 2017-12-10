@@ -1,4 +1,4 @@
-<div class="jumbotron text-center">
+<div class="jumbotron dashboard-jumbo text-center">
   <h1>Welcome to your Dashboard</h1>
   <div *ngIf="user">
     <h2 class="page-header">{{user.name}}</h2>
@@ -8,5 +8,20 @@
       <li class="list-group-item">Username: <br> {{user.username}}</li>
       <li class="list-group-item">Password: <br> {{user.password}}</li>
     </ul>
+  </div>
+</div>
+<div class="view-tips" *ngIf="user">
+  <div class="flex-container justify-center">
+    <button class="btn btn-info" (click)="viewTips(user.username)">Click here to view your tips</button>
+  </div>
+  <div class="container tip-container" *ngIf="canViewTips === true">
+    <div class="row">
+      <div class="col-sm-4">DATE</div>
+      <div class="col-sm-8">TIP</div>
+    </div>
+    <div class="row" *ngFor="let tip of user.tips">
+      <div class="col-sm-4">{{ tip.date }}</div>
+      <div class="col-sm-8">{{ tip.content }} </div>
+    </div>
   </div>
 </div>
